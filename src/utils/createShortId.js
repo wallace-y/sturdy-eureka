@@ -11,3 +11,5 @@ async function createShortId(longId) {
 
   return shortId;
 }
+
+export default createShortId;
