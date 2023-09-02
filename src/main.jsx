@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from 'react-dom/client'
+import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import App from "./App.jsx";
 import "./index.css";
@@ -7,7 +7,7 @@ import ErrorPage from "./components/ErrorPage.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/app/*",
+    path: "/*",
     element: <App />,
     errorElement: <ErrorPage />,
   },
