@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import createShortId from "../utils/createShortId";
+import "../css/Home.css"
 
 function Home() {
   const [longURL, setLongURL] = useState("");
@@ -28,10 +29,9 @@ function Home() {
 
   return (
     <>
-      <h1>URl Shortener App</h1>
+      <h1>URl Shortener</h1>
       <form onSubmit={handleSubmit}>
         <label>
-          Long URL:
           <input
             type="text"
             name="longId"
@@ -43,7 +43,7 @@ function Home() {
         </label>
         <button type="submit">Submit</button>
       </form>
-      {shortId == "" ? false : <h2>Short Id is {shortId}</h2>}
+      {shortId == "" ? false : <h2>Your new URL is: <a target="_blank" href={`https://url-shortener-i0yy.onrender.com/${shortId}`}>url-shortener-i0yy.onrender.com/{shortId}</a></h2>}
     </>
   );
 }
